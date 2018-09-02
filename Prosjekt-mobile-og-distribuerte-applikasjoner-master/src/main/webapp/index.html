@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChatApplication</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+    <div class="sidenav">
+        <h3>Conversations</h3>
+        <ul id='conversationlist'>
+            <li>   
+  <button onClick='addConversation' id='newConv'>+ New Conv</button>
+            </li>
+        </ul>
+   </div>
+	<div class="chatbox">
+		<div class="chatlogs">
+                    Conversation 1
+			<div class="chat friend">		
+                                <ul id="messagelist1">
+                                    <li class="chat-message">Helloooo</li>
+                                </ul>                                
+                        </div>
+                    
+                        <ul class='chat self' id="messagelist2">
+                            <li class="chat-message">Whats up?</li>
+                        </ul>                     
+                </div>
+		         <div class="chat-form">
+			<textarea id='messagecontent'></textarea>
+			<button onClick='sendTheMessage()' id='sendmessage'>Send</button>
+                        </div> 
+</div>            
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="chat.js"></script>
+
+</body>
+</html>
