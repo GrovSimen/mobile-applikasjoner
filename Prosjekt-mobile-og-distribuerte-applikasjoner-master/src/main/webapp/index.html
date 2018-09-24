@@ -1,40 +1,49 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-	<title>ChatApplication</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-
-    <div class="sidenav">
-        <h3>Conversations</h3>
-        <ul id='conversationlist'>
-            <li>   
-  <button onClick='addConversation' id='newConv'>+ New Conv</button>
-            </li>
-        </ul>
-   </div>
-	<div class="chatbox">
-		<div class="chatlogs">
-                    Conversation 1
-			<div class="chat friend">		
-                                <ul id="messagelist1">
-                                    <li class="chat-message">Helloooo</li>
-                                </ul>                                
-                        </div>
-                    
-                        <ul class='chat self' id="messagelist2">
-                            <li class="chat-message">Whats up?</li>
-                        </ul>                     
+    <head>
+        <title>Chat Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+        <script src="chat.js"></script>
+    </head>
+    <body>
+        <div class="container">            
+            <div id="conversations-view">
+                <div class="header">
+                    Chat Application
+                <img id="logo" src="C:/Users/Simen/Downloads/Prosjekt-mobile-og-distribuerte-applikasjoner-master/Prosjekt-mobile-og-distribuerte-applikasjoner-master/src/main/webapp/pictures/chat.png">
                 </div>
-		         <div class="chat-form">
-			<textarea id='messagecontent'></textarea>
-			<button onClick='sendTheMessage()' id='sendmessage'>Send</button>
-                        </div> 
-</div>            
+                <ul id="conversations"></ul>
+                <div id="addconversation" class="addconversation">
+                    <img id="add-conv" src="https://image.flaticon.com/icons/svg/39/39632.svg">
+                </div>
+                <div id="bottom">Version 0.0.2 Early Access</div>           
+            </div>
+            
+                <div id="messages-view">
+                <div class="input-container">
+                    <button id="message-back" class="material-icons">navigate_before</button>
+                    <div id="to"></div>
+                    <div id="addperson" class="addperson">
+                        <i id = "addperson-img" class="material-icons">person_add</i>
+                        <ul id="contact-list" class="addperson-dropdown"></ul>
+                    </div>
+                </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="chat.js"></script>
+                <ul id="messages"></ul>
 
-</body>
+                <div class="input-container">
+                    <i id="add-img" class="material-icons">add_photo_alternate</i>
+                    <input id="img-file" type="file" accept="image/*"/>
+                    <input id="text" type="text"/>
+                    <button id="send" class="material-icons">play_arrow</button>
+                </div>
+                <img id="image"/>
+            </div>
+        </div>
+    </body>
 </html>
