@@ -501,7 +501,7 @@ class Controller {
         let messageContainer = document.createElement('div');
         messageContainer.setAttribute('class','message-container');
         messageContainer.innerHTML = `
-             <img id="account-img" src="https://cdn.iconscout.com/public/images/icon/premium/png-512/account-avatar-man-client-person-profile-user-32aab4c67b296cea-512x512.png">
+             <img id="account-img" src="https://cdn.iconscout.com/public/images/icon/premium/png-512/account-avatar-man-client-person-profile-user-32aab4c67b296cea-512x512.png"></img>
         `;
         messageContainer.appendChild(messageContent);
 
